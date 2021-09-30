@@ -1,0 +1,77 @@
+$backgroud-color: hsl(233, 47%, 7%);
+$card-body-color: hsl(244, 38%, 16%);
+$highlight-color: hsl(277, 64%, 61%);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: $backgroud-color;
+  width: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-family: sans-serif;
+}
+
+.card {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: $card-body-color;
+  color: white;
+  width: 300px;
+  overflow: hidden;
+
+  text-align: center;
+
+
+}
+
+.hero-image{
+    background-image: url(image-header-mobile.jpg);
+    height: 200px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+
+    margin-bottom: 30px;
+
+}
+
+.text{
+    padding: 20px;
+}
+.highlight{
+    color: $highlight-color;
+}
+
+.title{
+    line-height: 2.0rem;
+    margin-bottom: 10px;
+}
+
+.paragraph{
+
+    color: rgb(187, 187, 187);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.detail{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(187, 187, 187);
+    font-weight: bold;
+}
+
+
