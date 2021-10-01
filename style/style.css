@@ -5,7 +5,7 @@
 
 body {
   background-color: #090b1a;
-  width: 375px;
+  min-width: 375px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,8 +15,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
   font-family: sans-serif;
 }
 
@@ -38,11 +36,17 @@ body {
 
 .hero-image {
   background-image: url(image-header-mobile.jpg);
-  height: 200px;
-  width: 300px;
+  min-height: 200px;
+  min-width: 300px;
   background-size: cover;
   background-position: center;
   margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    margin-bottom: 0;
+  }
 }
 
 .text {
@@ -80,6 +84,47 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   color: #bbbbbb;
+  margin-bottom: 1rem;
+}
+
+.detail span {
+  padding-bottom: 0.2rem;
+}
+
+.text-bold {
   font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    min-width: 1024px;
+  }
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 700px;
+    text-align: left;
+  }
+  .card .text {
+    padding: 50px;
+    padding-right: 100px;
+  }
+  .card .text .title {
+    line-height: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .status .detail span {
+    margin-right: 25px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
