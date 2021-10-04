@@ -2,9 +2,9 @@ $backgroud-color: hsl(233, 47%, 7%);
 $card-body-color: hsl(244, 38%, 16%);
 $highlight-color: hsl(277, 64%, 61%);
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,15 +13,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   font-family: sans-serif;
 }
 
-
-
 .card {
-    
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -31,109 +29,90 @@ body {
   overflow: hidden;
 
   text-align: center;
-  
-  
-  
-
 }
 
+.hero-image {
+  background-image: url(image-header-mobile.jpg);
+  min-height: 200px;
+  min-width: 300px;
+  background-size: cover;
+  background-position: center;
 
-
-.hero-image{
-    background-image: url(image-header-mobile.jpg);
-    min-height: 200px;
-    min-width: 300px;
-    background-size: cover;
-    background-position: center;
-
-    margin-bottom: 30px;
-
+  margin-bottom: 30px;
 }
 
-@media (min-width: 1024px){
-   
-    .hero-image{ margin-bottom: 0;}
+@media (min-width: 1024px) {
+  .hero-image {
+    margin-bottom: 0;
+  }
 }
 
-.text{
-    padding: 20px;
+.text {
+  padding: 20px;
 }
-.highlight{
-    color: $highlight-color;
-}
-
-.title{
-    line-height: 2.0rem;
-    margin-bottom: 10px;
+.highlight {
+  color: $highlight-color;
 }
 
-.paragraph{
-
-    color: rgb(187, 187, 187);
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 40px;
+.title {
+  line-height: 2rem;
+  margin-bottom: 10px;
 }
 
-.detail{
+.paragraph {
+  color: rgb(187, 187, 187);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 40px;
+}
 
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(187, 187, 187);
+  margin-bottom: 1rem;
+
+  span {
+    padding-bottom: 0.2rem;
+  }
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    min-width: 1024px;
+    height: 100vh;
+  }
+
+  .card {
+    flex-direction: row-reverse;
+    width: 700px;
+    text-align: left;
+    .text {
+      padding: 50px;
+      padding-right: 100px;
+      .title {
+        line-height: 2.2rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .status {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgb(187, 187, 187);
-    margin-bottom: 1rem;
-    
-    span{
-        padding-bottom: 0.2rem;
+
+    .detail {
+      span {
+        margin-right: 25px;
+      }
     }
-    
+  }
 }
-
-
-
-
-.text-bold{
-    font-weight: bold;
-}
-
-
-@media (min-width: 1024px){
-
-
-    html{
-        font-size: 10px;
-    }
-    body{
-        min-width: 1024px;
-        
-
-    }
-
-    .card{
-        flex-direction: row-reverse;
-        width: 700px;
-        text-align: left;
-        .text{
-            padding: 50px;
-            padding-right: 100px;
-            .title{
-                line-height: 2.2rem;
-                margin-bottom: 1.5rem;
-            }
-        }    
-                
-    }
-
-    .status{
-        display: flex;
-
-        .detail{
-            span{
-                margin-right: 25px;
-            }
-        }
-        
-    }
-}
-
